@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Compare - Find the Best Deals!</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="brand">Smart Shop Scout</h1>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Background Image -->
+    <section class="hero">
+        <div class="hero-content container">
+            <h1>Find the Best Prices, Anytime</h1>
+            <form id="product-form" class="search-form">
+                <input type="text" id="product-name" name="product_name" placeholder="Search for products..." required>
+                <button type="submit">Compare</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Results Section (Initially Hidden) -->
+    <section id="results-section" class="results-section container">
+        <h2>Search Results</h2>
+        <div id="loader" class="loader"></div>
+        <div id="results" class="results"></div>
+    </section>
+
+    <!-- Blocks with Placeholder Images -->
+    <section class="image-blocks container">
+        <h2>Popular Categories</h2>
+        <div class="blocks-grid">
+            <!-- Block 1: Electronics -->
+            <div class="block">
+                <img src="videocon-ha.jpg" alt="Electronics">
+                <h3>Electronics</h3>
+            </div>
+            <!-- Block 2: Fashion -->
+            <div class="block">
+                <img src="fashion.jpeg" alt="Fashion">
+                <h3>Fashion</h3>
+            </div>
+            <!-- Block 3: Home Appliances -->
+            <div class="block">
+                <img src="home1.jpeg" alt="Home Appliances">
+                <h3>Home Appliances</h3>
+            </div>
+            <!-- Block 4: Hot Deals -->
+            <div class="block">
+                <img src="sale.png" alt="Hot Deals">
+                <h3>Hot Deals</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <p>&copy; 2024 PriceCompare. All rights reserved.</p>
+            </div>
+            <div class="footer-bottom">
+                <div class="company-info">
+                    <h3>Contact Us</h3>
+                    <p>Room no 514 , The Ashtavakra Building</p>
+                    <p>Mumbai , Maharashtra - 400022</p>
+                    <p>Email: siddharth.koul@somaiya.edu</p>
+                    <p>Phone: +91 (989) 256-5705</p>
+                </div>
+                <div class="social-media">
+                    <h3>Follow Us</h3>
+                    <a href="#" class="social-icon"><img src="fb.png" alt="Facebook"></a>
+                    <a href="#" class="social-icon"><img src="x.webp" alt="Twitter"></a>
+                    <a href="#" class="social-icon"><img src="insta1.png" alt="Instagram"></a>
+                    <a href="#" class="social-icon"><img src="linkedin.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById("product-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let productName = document.getElementById("product-name").value;
+            let resultsSection = document.getElementById("results-section");
+            let resultsDiv = document.getElementById("results");
+            let loader = document.getElementById("loader");
+
+            // Show results section
+            resultsSection.style.display = "block";
+
+            // Simulate loading results
+            loader.style.display = "block";
+            resultsDiv.innerHTML = "";
+
+            setTimeout(() => {
+                loader.style.display = "none";
+                let sampleResults = [
+                    {
+                        name: productName + " on Amazon",
+                        price: "₹1,999",
+                        link: "https://www.amazon.in"
+                    },
+                    {
+                        name: productName + " on Flipkart",
+                        price: "₹1,850",
+                        link: "https://www.flipkart.com"
+                    },
+                    {
+                        name: productName + " on eBay",
+                        price: "₹2,050",
+                        link: "https://www.ebay.com"
+                    }
+                ];
+
+                sampleResults.forEach(product => {
+                    let productHtml = `
+                        <div class="product-card">
+                            <h3>${product.name}</h3>
+                            <p>Price: <strong>${product.price}</strong></p>
+                            <a href="${product.link}" target="_blank">Buy Now</a>
+                        </div>
+                    `;
+                    resultsDiv.innerHTML += productHtml;
+                });
+            }, 1500); // Simulate a 1.5-second delay for loading
+        });
+    </script>
+</body>
+</html>

@@ -19,6 +19,7 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
                 </ul>
             </div>
         </nav>
@@ -32,8 +33,16 @@
                 <input type="text" id="product-name" name="product_name" placeholder="Search for products..." required>
                 <button type="submit">Compare</button>
             </form>
+    
+            <!-- Move the results section here -->
+            <section id="results-section" class="results-section">
+                <h2>Search Results</h2>
+                <div id="loader" class="loader"></div>
+                <div id="results" class="results"></div>
+            </section>
         </div>
     </section>
+    
 
     <!-- Results Section (Initially Hidden) -->
     <section id="results-section" class="results-section container">
@@ -85,10 +94,10 @@
                 </div>
                 <div class="social-media">
                     <h3>Follow Us</h3>
-                    <a href="#" class="social-icon"><img src="fb.png" alt="Facebook"></a>
-                    <a href="#" class="social-icon"><img src="x.webp" alt="Twitter"></a>
-                    <a href="#" class="social-icon"><img src="insta1.png" alt="Instagram"></a>
-                    <a href="#" class="social-icon"><img src="linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://www.facebook.com/" class="social-icon"><img src="fb.png" alt="Facebook"></a>
+                    <a href="https://x.com/" class="social-icon"><img src="x.webp" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/" class="social-icon"><img src="insta1.png" alt="Instagram"></a>
+                    <a href="https://in.linkedin.com/" class="social-icon"><img src="linkedin.png" alt="LinkedIn"></a>
                 </div>
             </div>
         </div>

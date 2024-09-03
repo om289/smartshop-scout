@@ -8,7 +8,7 @@
 /* Body */
 body {
     font-family: 'Poppins', sans-serif;
-    background: #e00d0d; /* Gradient background for a modern look */
+    background: #c72929; /* Gradient background for a modern look */
     color: #f5f5f5;
     line-height: 1.6;
 }
@@ -145,17 +145,18 @@ header {
 }
 
 /* Results Section */
+/* Adjust results-section styling */
 .results-section {
     display: none; /* Initially hidden */
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #000000; /* White background for contrast */
+    margin-top: 30px; /* Space between the search form and results */
+    padding: 30px; /* Reduced padding for a smaller background */
+    background-color: #000000; /* Black background for contrast */
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 2;
     position: relative;
-    max-width: 1200px;
-    margin: 30px auto; /* Center the results section */
+    max-width: 1000px; /* Reduced width for a more compact look */
+    margin: 30px auto; /* Center the results section with reduced margin */
 }
 
 .results {
@@ -165,16 +166,18 @@ header {
     justify-content: center;
 }
 
+
 /* Product Card */
 .product-card {
     background-color: #fefefe;
     padding: 20px;
-    border-radius: 0px;
+    border-radius: 15px; /* Changed from 0px to 15px for rounded corners */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 300px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .product-card:hover {
     transform: translateY(-10px);

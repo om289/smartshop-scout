@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Price Compare - Find the Best Deals!</title>
-    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="styles3.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -34,43 +33,83 @@
                 <button type="submit">Compare</button>
             </form>
     
-            <!-- Move the results section here -->
+            <!-- Result Section -->
             <section id="results-section" class="results-section">
                 <h2>Search Results</h2>
                 <div id="loader" class="loader"></div>
                 <div id="results" class="results"></div>
             </section>
-        </div>
-    </section>
-    
+            <section class="white-background">
+                <!-- Your existing content below the hero section -->
+            </section>
+        
+    </div>
 
-    <!-- Results Section (Initially Hidden) -->
-    <section id="results-section" class="results-section container">
-        <h2>Search Results</h2>
-        <div id="loader" class="loader"></div>
-        <div id="results" class="results"></div>
-    </section>
+        <!-- First Set of Image Boxes -->
+        <section class="image-boxes">
+            <a href="iphone-details.html" class="box">
+                <img src="iphone.png" alt="Example 1">
+                <h3>Deals on iPhone</h3>
+            </a>
+            <a href="example2-details.html" class="box">
+                <img src="sam.png" alt="Example 2">
+                <h3>S22 at best price</h3>
+            </a>
+            <a href="example3-details.html" class="box">
+                <img src="mac.webp" alt="Example 3">
+                <h3>powerful macs</h3>
+            </a>
+            <a href="example4-details.html" class="box">
+                <img src="watch.png" alt="Example 4">
+                <h3>next gen watches</h3>
+            </a>
+        </section>
+
+        <!-- Slideshow Section -->
+<section class="slideshow">
+    <div class="slideshow-container">
+        <div class="slide">
+            <a href="login.html">
+                <img src="slide1.jpeg" alt="Slide 1">
+            </a>
+        </div>
+        <div class="slide">
+            <a href="https://example.com/page2" target="_blank">
+                <img src="slide2.jpeg" alt="Slide 2">
+            </a>
+        </div>
+        <div class="slide">
+            <a href="https://example.com/page3" target="_blank">
+                <img src="slide3.png" alt="Slide 3">
+            </a>
+        </div>
+        <div class="slide">
+            <a href="https://example.com/page4" target="_blank">
+                <img src="slide4.png" alt="Slide 4">
+            </a>
+        </div>
+    </div>
+</section>
+
+
+       
 
     <!-- Blocks with Placeholder Images -->
     <section class="image-blocks container">
         <h2>Popular Categories</h2>
         <div class="blocks-grid">
-            <!-- Block 1: Electronics -->
             <div class="block">
                 <img src="videocon-ha.jpg" alt="Electronics">
                 <h3>Electronics</h3>
             </div>
-            <!-- Block 2: Fashion -->
             <div class="block">
                 <img src="fashion.jpeg" alt="Fashion">
                 <h3>Fashion</h3>
             </div>
-            <!-- Block 3: Home Appliances -->
             <div class="block">
                 <img src="home1.jpeg" alt="Home Appliances">
                 <h3>Home Appliances</h3>
             </div>
-            <!-- Block 4: Hot Deals -->
             <div class="block">
                 <img src="sale.png" alt="Hot Deals">
                 <h3>Hot Deals</h3>
@@ -112,10 +151,7 @@
             let resultsDiv = document.getElementById("results");
             let loader = document.getElementById("loader");
 
-            // Show results section
             resultsSection.style.display = "block";
-
-            // Simulate loading results
             loader.style.display = "block";
             resultsDiv.innerHTML = "";
 
@@ -149,8 +185,27 @@
                     `;
                     resultsDiv.innerHTML += productHtml;
                 });
-            }, 1500); // Simulate a 1.5-second delay for loading
+            }, 1500);
         });
+        // Slideshow script
+        let slideIndex = 0;
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        showSlides();
+
+        
     </script>
+
+    
 </body>
 </html>

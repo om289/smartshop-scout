@@ -8,43 +8,37 @@
 /* Body */
 body {
     font-family: 'Poppins', sans-serif;
-    background: #c72929; /* Gradient background for a modern look */
+    background: #000000;
     color: #f5f5f5;
     line-height: 1.6;
 }
 
 /* Navbar */
-
-   /* Navbar */
 header {
-    background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background */
-    padding: 15px 25px; /* Increased padding to move content away from the edges */
+    background-color: rgba(0, 0, 0, 1);
+    padding: 15px 25px;
     position: fixed;
     width: 100%;
     z-index: 10;
     top: 0;
     left: 0;
-    backdrop-filter: blur(10px); /* Blurred background effect */
+    backdrop-filter: blur(10px);
 }
 
-
 .navbar .container {
-   
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px; /* Added max-width for better alignment */
-    margin: 0 auto; /* Center the container */
-    padding: 0 1px; /* Padding to push content inward */
-    }
-    
-
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1px;
+}
 
 .navbar h1 {
     color: #ecf0f1;
     font-size: 2rem;
     font-weight: 700;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Slight shadow for a techy feel */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
 
 .navbar .nav-links {
@@ -64,19 +58,20 @@ header {
 }
 
 .navbar .nav-links li a:hover {
-    color: #1abc9c; /* Modern green accent */
-    transform: scale(1.1); /* Slight zoom effect */
+    color: #1abc9c;
+    transform: scale(1.1);
 }
 
 /* Hero Section */
 .hero {
-    background-image: url('smarty1.png'); /* Your techy background image */
+    background-image: url('smarty1.png');
     background-size: cover;
     background-position: center;
     padding: 100px 0;
     color: #ffffff;
     text-align: center;
-    height: 100vh; /* Full screen height */
+    height: auto;
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -90,7 +85,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2); /* Dark overlay for readability */
+    background: rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -99,15 +94,8 @@ header {
     font-weight: 700;
     margin-bottom: 20px;
     z-index: 2;
-    color: #ffffff; /* Bright white for high contrast */
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); /* Shadow for better readability */
-}
-
-
-.hero p {
-    font-size: 1.5rem;
-    margin-bottom: 40px;
-    z-index: 2;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .search-form {
@@ -116,6 +104,7 @@ header {
     max-width: 500px;
     position: relative;
     z-index: 2;
+    margin: 0 auto;
 }
 
 .search-form input {
@@ -125,7 +114,7 @@ header {
     border: none;
     width: 80%;
     outline: none;
-    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2); /* Neumorphism effect */
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .search-form button {
@@ -141,22 +130,94 @@ header {
 
 .search-form button:hover {
     background-color: #2980b9;
-    transform: translateY(-2px); /* Lift effect */
+    transform: translateY(-2px);
 }
 
+/* Image Boxes Section */
+.image-boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 30px auto;
+    padding: 20px;
+    background: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.box {
+    display: block;
+    height: 450px;
+    text-align: center;
+    background: #fff;
+     /* Ensure a background for the box */
+    border-radius: 0px;
+    padding: 20px;
+    box-shadow: none;
+    transition: transform 0.3s ease;
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+}
+
+.box:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.box img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.box h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+.slideshow {
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+}
+
+.slide img:hover {
+    opacity: 0.8;
+}
+
+
+
 /* Results Section */
-/* Adjust results-section styling */
 .results-section {
-    display: none; /* Initially hidden */
-    margin-top: 30px; /* Space between the search form and results */
-    padding: 30px; /* Reduced padding for a smaller background */
-    background-color: #000000; /* Black background for contrast */
+    display: none;
+    margin-top: 30px;
+    padding: 30px;
+    background-color: #000000;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 2;
     position: relative;
-    max-width: 1000px; /* Reduced width for a more compact look */
-    margin: 30px auto; /* Center the results section with reduced margin */
+    max-width: 1000px;
+    margin: 30px auto;
 }
 
 .results {
@@ -166,18 +227,16 @@ header {
     justify-content: center;
 }
 
-
 /* Product Card */
 .product-card {
     background-color: #fefefe;
     padding: 20px;
-    border-radius: 15px; /* Changed from 0px to 15px for rounded corners */
+    border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 300px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 .product-card:hover {
     transform: translateY(-10px);
@@ -212,14 +271,12 @@ header {
 
 /* Image Blocks Section */
 .image-blocks {
-
-    margin-top: 30px; /* Existing margin */
+    margin-top: 30px;
     padding: 20px;
-    background-color: #000000; /* White background for contrast */
+    background-color: #000000;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 50px; /* Add margin-bottom to create space before footer */
-  
+    margin-bottom: 50px;
 }
 
 .image-blocks h2 {
@@ -238,7 +295,7 @@ header {
 
 .block {
     text-align: center;
-    background: #ffffff; /* Slightly opaque background for blocks */
+    background: #ffffff;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -246,7 +303,7 @@ header {
 }
 
 .block:hover {
-    transform: scale(1.05); /* Zoom effect on hover */
+    transform: scale(1.05);
 }
 
 .block img {
@@ -259,6 +316,23 @@ header {
     font-size: 1.5rem;
     color: #333;
 }
+
+/* Slideshow Section */
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
 
 /* Loader */
 .loader {
@@ -283,7 +357,7 @@ header {
     color: #ecf0f1;
     padding: 40px 20px;
     text-align: center;
-    margin-top: 20px; /* Ensure footer is not stuck to the content above */
+    margin-top: 20px;
 }
 
 .footer .container {
@@ -363,5 +437,13 @@ header {
     .results {
         flex-direction: column;
         align-items: center;
+    }
+
+    .image-boxes {
+        flex-direction: column;
+    }
+
+    .box {
+        margin-bottom: 20px;
     }
 }

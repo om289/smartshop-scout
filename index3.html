@@ -13,16 +13,31 @@
     <header>
         <nav class="navbar">
             <div class="container">
-                <h1 class="brand">Smart Shop Scout</h1>
+                <h1 class="brand">VelaNova</h1>
                 <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="index3.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="login.html">Login</a></li>
                 </ul>
             </div>
+            <section class="menu-bar">
+                <div class="container">
+                    
+                    <a href="#" class="menu-button">Today's Deals</a>
+                    <a href="#" class="menu-button">Best Sellers</a>
+                    <a href="#" class="menu-button">New Releases</a>
+                    <a href="#" class="menu-button">Gift Ideas</a>
+                    <a href="#" class="menu-button">Customer Service</a>
+                </div>
+            </section>
         </nav>
+        
     </header>
+
+    <!-- Menu Section -->
+
+
 
     <!-- Hero Section with Background Image -->
     <section class="hero">
@@ -66,30 +81,73 @@
         </section>
 
         <!-- Slideshow Section -->
-<section class="slideshow">
-    <div class="slideshow-container">
-        <div class="slide">
-            <a href="login.html">
+    <section class="slideshow">
+        <div class="slideshow-container">
+            <div class="slide">
+                <a href="login.html">
                 <img src="slide1.jpeg" alt="Slide 1">
-            </a>
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://example.com/page2" target="_blank">
+                    <img src="slide2.jpeg" alt="Slide 2">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://example.com/page3" target="_blank">
+                    <img src="slide3.png" alt="Slide 3">
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://example.com/page4" target="_blank">
+                    <img src="slide4.png" alt="Slide 4">
+                </a>
+            </div>
         </div>
-        <div class="slide">
-            <a href="https://example.com/page2" target="_blank">
-                <img src="slide2.jpeg" alt="Slide 2">
-            </a>
+
+        <div class="brand-logos">
+            <h2 class="brand-title">Customer Favorite Brands</h2>
+            <div class="logo-grid">
+                <a href="https://www.levis.com" class="logo-box">
+                    <img src="levi.png" alt="Levi's Logo">
+                    <label>LEVI'S</label>
+                </a>
+                <a href="https://www.samsung.com" class="logo-box">
+                    <img src="sambhai.png" alt="Samsung Logo">
+                    <label>Samsung</label>
+                </a>
+                <a href="https://www.apple.com" class="logo-box">
+                    <img src="apple.png" alt="Apple Logo">
+                    <label>Apple</label>
+                </a>
+                <a href="https://www.lg.com" class="logo-box">
+                    <img src="lg.png" alt="LG Logo">
+                    <label>LG</label>
+                </a>
+                <a href="#" class="logo-box">
+                    <img src="op.png" alt="Brand 5 Logo">
+                    <label>OnePlus</label>
+                </a>
+                <a href="#" class="logo-box">
+                    <img src="haier.png" alt="Brand 6 Logo">
+                    <label>Haier</label>
+                </a>
+                <a href="#" class="logo-box">
+                    <img src="bs.png" alt="Brand 7 Logo">
+                    <label>BlueStar</label>
+                </a>
+                <a href="#" class="logo-box">
+                    <img src="daikin.png" alt="Brand 8 Logo">
+                    <label>Daikin</label>
+                </a>
+                <a href="#" class="logo-box">
+                    <img src="og.png" alt="Brand 9 Logo">
+                    <label>OGeneral</label>
+                </a>
+            </div>
         </div>
-        <div class="slide">
-            <a href="https://example.com/page3" target="_blank">
-                <img src="slide3.png" alt="Slide 3">
-            </a>
-        </div>
-        <div class="slide">
-            <a href="https://example.com/page4" target="_blank">
-                <img src="slide4.png" alt="Slide 4">
-            </a>
-        </div>
-    </div>
-</section>
+        
+    </section>
 
 
        
@@ -143,68 +201,7 @@
     </footer>
 
     <!-- JavaScript -->
-    <script>
-        document.getElementById("product-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-            let productName = document.getElementById("product-name").value;
-            let resultsSection = document.getElementById("results-section");
-            let resultsDiv = document.getElementById("results");
-            let loader = document.getElementById("loader");
-
-            resultsSection.style.display = "block";
-            loader.style.display = "block";
-            resultsDiv.innerHTML = "";
-
-            setTimeout(() => {
-                loader.style.display = "none";
-                let sampleResults = [
-                    {
-                        name: productName + " on Amazon",
-                        price: "₹1,999",
-                        link: "https://www.amazon.in"
-                    },
-                    {
-                        name: productName + " on Flipkart",
-                        price: "₹1,850",
-                        link: "https://www.flipkart.com"
-                    },
-                    {
-                        name: productName + " on eBay",
-                        price: "₹2,050",
-                        link: "https://www.ebay.com"
-                    }
-                ];
-
-                sampleResults.forEach(product => {
-                    let productHtml = `
-                        <div class="product-card">
-                            <h3>${product.name}</h3>
-                            <p>Price: <strong>${product.price}</strong></p>
-                            <a href="${product.link}" target="_blank">Buy Now</a>
-                        </div>
-                    `;
-                    resultsDiv.innerHTML += productHtml;
-                });
-            }, 1500);
-        });
-        // Slideshow script
-        let slideIndex = 0;
-
-        function showSlides() {
-            let slides = document.getElementsByClassName("slide");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}    
-            slides[slideIndex-1].style.display = "block";  
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
-        }
-
-        showSlides();
-
-        
-    </script>
+    <script src="index3.js"></script>
 
     
 </body>

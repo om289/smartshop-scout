@@ -576,3 +576,20 @@ header {
     }
 }
 
+
+/* --- Mobile Navigation Drawer Layout (Added Sep 2024) --- */
+.nav-drawer {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 5px 0 25px rgba(0,0,0,0.5);
+}
+.nav-drawer.open {
+    left: 0;
+}

@@ -6,10 +6,11 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f5f5f5;
     color: #333;
     line-height: 1.6;
+    background-color: #121212;
+    color: #000;
+    font-family: 'Orbitron', sans-serif;
 }
 
 /* Header */
@@ -64,6 +65,8 @@ nav {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    
+   
 }
 
 .about-section h1 {
@@ -81,6 +84,7 @@ nav {
     height: 400px;
     border-radius: 10px;
 }
+
 
 /* History Section */
 /* History Section */

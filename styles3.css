@@ -6,13 +6,48 @@
 }
 
 /* Body */
+
 body {
-    font-family: 'Poppins', sans-serif;
-    background: green;
     height: 0;
-    color: #f5f5f5;
     line-height: 1.6;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    background-color: #121212;
+    color: #00ffff;
+    font-family: 'Orbitron', sans-serif;
 }
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+.card {
+    transform: perspective(1000px) rotateY(10deg);
+    transition: transform 0.5s ease-in-out;
+}
+.card:hover {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.neon-text {
+    color: #0f0;
+    text-shadow: 0 0 5px #0f0, 0 0 10px #0f0;
+}
+
+
+/* Slide-In Animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
 
 /* Navbar */
 header {
@@ -33,6 +68,7 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1px;
+    
 }
 
 .navbar h1 {
@@ -40,11 +76,16 @@ header {
     font-size: 2rem;
     font-weight: 700;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    color: rgb(255, 4, 0);
+    text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px rgb(0, 0, 0);
+    animation: slideIn 0.8s ease-out forwards;
+
 }
 
 .navbar .nav-links {
     list-style: none;
     display: flex;
+
 }
 
 .navbar .nav-links li {
@@ -108,7 +149,7 @@ header {
 
 /* Hero Section */
 .hero {
-    background-image: url('smarty1.png');
+    background-image: url('smarti1.png');
     background-size: cover;
     background-position: center;
     padding: 0px 0px;
@@ -392,11 +433,21 @@ header {
     height: 50px;
     animation: spin 1s linear infinite;
     margin: 20px auto;
+
 }
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+.parallax {
+    background-image: url('background-image.jpg');
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -405,7 +456,7 @@ header {
 /* Brand Logos Section */
 .brand-logos {
     padding: 40px;
-    background-color: #000;
+    background-color: transparent;
     text-align: center;
     margin-top: 60px;
     
@@ -441,6 +492,7 @@ header {
     text-decoration: none; /* Remove underline from links */
     color: inherit; /* Inherit text color */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 200px;
 }
 
 .logo-box:hover {

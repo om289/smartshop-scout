@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Price Compare - Find the Best Deals!</title>
     <link rel="stylesheet" href="styles3.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    
+    
 
     <!-- Navigation Bar -->
     <header>
@@ -35,6 +38,8 @@
         
     </header>
 
+    
+
     <!-- Menu Section -->
 
 
@@ -47,6 +52,14 @@
                 <input type="text" id="product-name" name="product_name" placeholder="Search for products..." required>
                 <button type="submit">Compare</button>
             </form>
+
+            <div id="dynamic-form-section" style="display:none;">
+                <h2 id="product-type-title"></h2>
+                <form id="dynamic-form">
+                    <!-- Dynamic form fields will be appended here -->
+                </form>
+            </div>
+            
     
             <!-- Result Section -->
             <section id="results-section" class="results-section">

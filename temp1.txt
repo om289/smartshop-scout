@@ -1,4 +1,19 @@
-document.getElementById("product-form").addEventListener("submit", function(event) {
+ <!-- Result Section -->
+            <section id="results-section" class="results-section">
+                <h2>Search Results</h2>
+                <div id="loader" class="loader"></div>
+                <div id="results" class="results"></div>
+            </section>
+            <section class="white-background">
+                <!-- Your existing content below the hero section -->
+            </section>
+        
+    </div>
+
+
+
+
+    document.getElementById("product-form").addEventListener("submit", function(event) {
     event.preventDefault();
     let productName = document.getElementById("product-name").value;
     let resultsSection = document.getElementById("results-section");
@@ -41,20 +56,3 @@ document.getElementById("product-form").addEventListener("submit", function(even
         });
     }, 1500);
 });
-// Slideshow script
-let slideIndex = 0;
-
-function showSlides() {
-    let slides = document.getElementsByClassName("slide");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    slides[slideIndex-1].style.display = "block";  
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
-}
-
-showSlides();
-
-

@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Price Compare - Find the Best Deals!</title>
     <link rel="stylesheet" href="styles3.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    
+    
 
     <!-- Navigation Bar -->
     <header>
@@ -15,15 +18,16 @@
             <div class="container">
                 <h1 class="brand">VelaNova</h1>
                 <ul class="nav-links">
-                    <li><a href="index3.html">Home</a></li>
+                    <li><a href="index3.php">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="#">Contact</a></li>
-                    <li><a href="login.html">Login</a></li>
+                    
+                    <!-- Conditional login/logout buttons -->
+                    
                 </ul>
             </div>
             <section class="menu-bar">
                 <div class="container">
-                    
                     <a href="#" class="menu-button">Today's Deals</a>
                     <a href="#" class="menu-button">Best Sellers</a>
                     <a href="#" class="menu-button">New Releases</a>
@@ -32,8 +36,11 @@
                 </div>
             </section>
         </nav>
-        
     </header>
+   
+
+
+    
 
     <!-- Menu Section -->
 
@@ -41,24 +48,25 @@
 
     <!-- Hero Section with Background Image -->
     <section class="hero">
-        <div class="hero-content container">
-            <h1>Find the Best Prices, Anytime</h1>
-            <form id="product-form" class="search-form">
-                <input type="text" id="product-name" name="product_name" placeholder="Search for products..." required>
-                <button type="submit">Compare</button>
-            </form>
+        <div class="container">
+            <h1>Product Price Comparison</h1>
+            <div class="product-info">
+                <label for="product">Enter Product Name:</label>
+                <input type="text" id="product" value="" placeholder="e.g. laptop, iPhone" />
+                <button onclick="fetchPrices()">Get Prices</button>
+                <div class="loader" id="loader" style="display: none;"></div>
+            </div>
+            <div id="price-results">
+                <div id="flipkart-result"></div>
+                <div id="amazon-result"></div>
+                <div id="croma-result"></div> 
+                <!-- Prices will be displayed here -->
+            </div>
+            
+        </div>
+            
     
-            <!-- Result Section -->
-            <section id="results-section" class="results-section">
-                <h2>Search Results</h2>
-                <div id="loader" class="loader"></div>
-                <div id="results" class="results"></div>
-            </section>
-            <section class="white-background">
-                <!-- Your existing content below the hero section -->
-            </section>
-        
-    </div>
+            
 
         <!-- First Set of Image Boxes -->
         <section class="image-boxes">
@@ -84,22 +92,22 @@
     <section class="slideshow">
         <div class="slideshow-container">
             <div class="slide">
-                <a href="login.html">
+                <a href="https://www.samsung.in">
                 <img src="slide1.jpeg" alt="Slide 1">
                 </a>
             </div>
             <div class="slide">
-                <a href="https://example.com/page2" target="_blank">
+                <a href="https://www.rolex.com" target="_blank">
                     <img src="slide2.jpeg" alt="Slide 2">
                 </a>
             </div>
             <div class="slide">
-                <a href="https://example.com/page3" target="_blank">
+                <a href="https://www.victorinox.com" target="_blank">
                     <img src="slide3.png" alt="Slide 3">
                 </a>
             </div>
             <div class="slide">
-                <a href="https://example.com/page4" target="_blank">
+                <a href="https://www.levi.in " target="_blank">
                     <img src="slide4.png" alt="Slide 4">
                 </a>
             </div>

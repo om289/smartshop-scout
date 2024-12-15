@@ -56,3 +56,16 @@ function showSlides() {
 }
 
 showSlides();
+
+// Product Details Image Carousel (Added Dec 2024)
+function initCarousel(carouselId) {
+    const carousel = document.getElementById(carouselId);
+    if (!carousel) return;
+    let index = 0;
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    setInterval(() => {
+        slides[index].classList.remove('active');
+        index = (index + 1) % slides.length;
+        slides[index].classList.add('active');
+    }, 4500);
+}

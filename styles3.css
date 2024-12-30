@@ -602,3 +602,19 @@ header {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
+
+/* --- Cart Overlay Sidebar (Added Dec 2024) --- */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -360px;
+    width: 360px;
+    height: 100%;
+    background: #0f172a;
+    border-left: 1px solid rgba(255,255,255,0.08);
+    transition: right 0.3s ease;
+    z-index: 1001;
+}
+.cart-sidebar.visible {
+    right: 0;
+}

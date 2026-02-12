@@ -6,3 +6,8 @@ A clean e-commerce landing page interface featuring responsive product grids, dy
 - Interactive product sections.
 - Responsive CSS grid alignment.
 - Low-poly animated backdrops.
+
+
+## Design Principles
+- Simplicity first
+- Fast feedback loop

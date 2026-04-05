@@ -11,3 +11,7 @@ A clean e-commerce landing page interface featuring responsive product grids, dy
 ## Design Principles
 - Simplicity first
 - Fast feedback loop
+
+
+## Custom Search Indexing
+- Optimized fuzzy match algorithms

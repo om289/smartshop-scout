@@ -3,3 +3,6 @@ Welcome to smartshop-scout! Follow this guide to setup.
 
 ## API Endpoints Reference
 Contains structures of payload requests.
+
+## UI Rendering optimization
+Browser configurations for standard UI components.

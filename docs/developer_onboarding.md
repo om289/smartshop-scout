@@ -6,3 +6,6 @@ Contains structures of payload requests.
 
 ## UI Rendering optimization
 Browser configurations for standard UI components.
+
+## Security Protocols
+Keep keys in local environment settings.

@@ -9,3 +9,6 @@ Browser configurations for standard UI components.
 
 ## Security Protocols
 Keep keys in local environment settings.
+
+## Browser Client Debugging
+Standard logs are output to development consoles.
